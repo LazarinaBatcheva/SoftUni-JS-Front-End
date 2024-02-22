@@ -1,6 +1,6 @@
 function determiningAges(age) {
     age = Number(age);
-    let result = "";
+    let result = '';
 
     if (age < 0) {
         result = 'out of bounds'
