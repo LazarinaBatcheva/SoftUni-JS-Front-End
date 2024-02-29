@@ -1,7 +1,7 @@
 function calculating(number, ...commands) {
     number = Number(number);
 
-    for (command of commands) {
+    for (let command of commands) {
         switch (command) {
             case 'chop':
                 number /= 2;
