@@ -1,5 +1,6 @@
 function userLogin(arrayOfStrings) {
     const maxAttempts = 4;
+    
     let username = arrayOfStrings[0];
     let password = username.split('').reverse().join('');
 
