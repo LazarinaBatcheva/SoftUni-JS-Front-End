@@ -8,7 +8,6 @@ function washingCar(commandsArray) {
         mud: () => washProgress *= 0.9,
     }
 
-
     commandsArray.forEach(command => actions[command]());
 
     console.log(`The car is ${washProgress.toFixed(2)}% clean.`);
