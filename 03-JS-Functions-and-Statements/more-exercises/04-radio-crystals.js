@@ -22,7 +22,7 @@ function monitoringCrystalThickness(input) {
 
             let reducedThickness = operations[operation](currentThickness);
 
-            while (reducesThickness >= targetThickness - 1) {
+            while (reducedThickness >= targetThickness - 1) {
                 currentThickness = reducedThickness;
                 reducedThickness = operations[operation](currentThickness);
                 operationCounter += 1;
