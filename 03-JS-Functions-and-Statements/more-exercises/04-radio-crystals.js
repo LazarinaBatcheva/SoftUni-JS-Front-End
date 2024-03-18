@@ -20,11 +20,11 @@ function monitoringCrystalThickness(input) {
         for (let operation in operations) {
             let operationCounter = 0;
 
-            let reducesThickness = operations[operation](currentThickness);
+            let reducedThickness = operations[operation](currentThickness);
 
             while (reducesThickness >= targetThickness - 1) {
-                currentThickness = reducesThickness;
-                reducesThickness = operations[operation](currentThickness);
+                currentThickness = reducedThickness;
+                reducedThickness = operations[operation](currentThickness);
                 operationCounter += 1;
             }
 
