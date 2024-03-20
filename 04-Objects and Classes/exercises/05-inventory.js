@@ -17,9 +17,8 @@ function printHeroesInfo(data) {
 
     data.forEach(line => getHeroData(line))
 
-    heroesInfo.sort((a, b) => a.level - b.level);
-
     heroesInfo
+        .sort((a, b) => a.level - b.level)
         .forEach(hero => console.log(`Hero: ${hero.name}\nlevel => ${hero.level}\nitems => ${hero.items}`));
 }
 
