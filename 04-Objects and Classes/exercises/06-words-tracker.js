@@ -1,4 +1,4 @@
-function printRepeatedWords(wordsList) {
+function findAndPrintRepeatedWords(wordsList) {
     const searchedWords = wordsList.shift().split(' ');
     const repeatedWords = {};
 
@@ -21,7 +21,7 @@ function printRepeatedWords(wordsList) {
 
 // test code
 
-printRepeatedWords([
+findAndPrintRepeatedWords([
     'this sentence', 
     'In', 'this', 'sentence', 'you', 'have', 'to', 'count', 'the', 'occurrences', 'of', 'the', 'words', 'this', 'and', 'sentence', 'because', 'this', 'is', 'your', 'task'
     ]
@@ -29,7 +29,7 @@ printRepeatedWords([
 
 console.log();
 
-printRepeatedWords([
+findAndPrintRepeatedWords([
     'is the', 
     'first', 'sentence', 'Here', 'is', 'another', 'the', 'And', 'finally', 'the', 'the', 'sentence']
     );
