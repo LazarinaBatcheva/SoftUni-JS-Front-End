@@ -1,22 +1,43 @@
 function printParkingLotInfo(carsList) {
-    const parkingInfo = {};
-    
+    const parkingInfo = new Set();
+
     carsList.forEach(car => {
-        const [command, carRegistration] = car.split(', ');
-        command === 'IN' 
-            ? parkingInfo[carRegistration] = true 
-            : delete parkingInfo[carRegistration];
+        const [command, carRegistration] = car.split (', ');
+        command === 'IN'
+            ? parkingInfo.add(carRegistration)
+            : parkingInfo.delete(carRegistration);
     });
 
-    if (Object.keys(parkingInfo).length === 0) {
+    if (parkingInfo.size === 0) {
         console.log('Parking Lot is Empty');
     }
 
-    Object
-        .keys(parkingInfo)
+    Array
+        .from(parkingInfo.values())
         .sort((a, b) => a.localeCompare(b))
         .forEach(carRegistration => console.log(carRegistration));
 }
+
+
+// function printParkingLotInfo(carsList) {
+//     const parkingInfo = {};
+    
+//     carsList.forEach(car => {
+//         const [command, carRegistration] = car.split(', ');
+//         command === 'IN' 
+//             ? parkingInfo[carRegistration] = true 
+//             : delete parkingInfo[carRegistration];
+//     });
+
+//     if (Object.keys(parkingInfo).length === 0) {
+//         console.log('Parking Lot is Empty');
+//     }
+
+//     Object
+//         .keys(parkingInfo)
+//         .sort((a, b) => a.localeCompare(b))
+//         .forEach(carRegistration => console.log(carRegistration));
+// }
 
 
 // test code
