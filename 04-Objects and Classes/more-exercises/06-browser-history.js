@@ -23,7 +23,6 @@ function printBrowserHistory(browserData, commandsList) {
             browserHistory['Open Tabs'].push(siteName);
             browserHistory['Browser Logs'].push(`${command} ${siteName}`);
         }
-
     }
 
     console.log(browserHistory['Browser Name']);
