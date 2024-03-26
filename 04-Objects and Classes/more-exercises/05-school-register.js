@@ -3,8 +3,8 @@ function printSchoolRegister(studentsInfoList) {
 
     studentsInfoList.forEach(studentInfo => {
         const [name, grade, score] = studentInfo
-                                        .split(', ')
-                                        .map(item => item.split(': ')[1]);
+                                            .split(', ')
+                                            .map(item => item.split(': ')[1]);
         if (parseFloat(score) >= 3) {
             const nextGrade = parseInt(grade) + 1;
             if (!schoolRegister[nextGrade]) {
