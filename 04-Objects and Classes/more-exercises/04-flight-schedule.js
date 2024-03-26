@@ -18,7 +18,7 @@ function printFlightInfo(dataList) {
 
     Object.entries(flightsInfo)
         .filter(([_, flight]) => flight.status === statusToCheck)
-        .forEach(flight => console.log(`{ Destination: '${flight[1].destination}', Status: '${flight[1].status}' }`));
+        .forEach(([_, flight]) => console.log(`{ Destination: '${flight.destination}', Status: '${flight.status}' }`));
 }
 
 
