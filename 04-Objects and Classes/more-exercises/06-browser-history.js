@@ -1,11 +1,11 @@
 function printBrowserHistory(browserData, commandsList) {
     const browserHistory = browserData;
-    const cleareCommand = 'Clear History and Cache';
+    const clearCommand = 'Clear History and Cache';
     const openCommand = 'Open';
     const closeCommand = 'Close';
 
     for (const data of commandsList) {
-        if (data === cleareCommand) {
+        if (data === clearCommand) {
             browserHistory['Open Tabs'] = [];
             browserHistory['Recently Closed'] = [];
             browserHistory['Browser Logs'] = [];
