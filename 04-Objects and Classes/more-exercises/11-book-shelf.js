@@ -6,7 +6,7 @@ function storeBookshelfsInfo(data) {
             const [shelfId, shelfGenre] = line.split(' -> ');
             
             if (!bookshelfsInfo.hasOwnProperty(shelfId)) {
-                bookshelfsInfo[shelfId] = {genre: shelfGenre, books: [], booksCount: 0};
+                bookshelfsInfo[shelfId] = {genre: shelfGenre, books: []};
             }
         } else {
             const [bookTitle, bookData] = line.split(': ');
@@ -15,7 +15,6 @@ function storeBookshelfsInfo(data) {
             for (let id in bookshelfsInfo) {
                 if (bookshelfsInfo[id].genre === bookGenre) {
                     bookshelfsInfo[id].books.push({title: bookTitle, author});
-                    bookshelfsInfo[id].booksCount++;
                 }
             }
         }
@@ -26,7 +25,7 @@ function storeBookshelfsInfo(data) {
                                 .map(([shelfId, shelf]) => ({ id: shelfId, ...shelf }));
 
     sortedShelves.forEach(shelf => {
-        console.log(`${shelf.id} ${shelf.genre}: ${shelf.booksCount}`);
+        console.log(`${shelf.id} ${shelf.genre}: ${shelf.books.length}`);
         shelf.books.forEach(book => console.log(`--> ${book.title}: ${book.author}`));
     });
 }
