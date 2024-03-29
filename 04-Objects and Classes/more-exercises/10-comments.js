@@ -27,15 +27,15 @@ function storeArticleComments(input) {
         }       
     };
 
-    const sortedArticles = Object.entries(commentsInfo)
-                                .sort((a, b) => b[1].length - a[1].length)
-                                .forEach(([articleName, comments]) => {
-                                    comments.sort((a, b) => a.username.localeCompare(b.username))
-                                    console.log(`Comments on ${articleName}`)
-                                    for ( let comment of comments) {
-                                        console.log(`--- From user ${comment.username}: ${comment.commentTitle} - ${comment.commentContent}`);
-                                    }
-                                });
+Object.entries(commentsInfo)
+    .sort((a, b) => b[1].length - a[1].length)
+    .forEach(([articleName, comments]) => {
+        comments.sort((a, b) => a.username.localeCompare(b.username))
+        console.log(`Comments on ${articleName}`)
+        for ( let comment of comments) {
+            console.log(`--- From user ${comment.username}: ${comment.commentTitle} - ${comment.commentContent}`);
+        }
+    });
 }
 
 
