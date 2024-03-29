@@ -3,7 +3,7 @@ function storeSoftUniCoursesInfo(data) {
 
     data.forEach(line => {
         if (line.includes('joins')) {
-            const [_, username, creditsString, email, ...courseName] = line.match(/(\w+)\[(\d+)\] with email (\S+) joins (.+)/);
+            const [_, username, creditsString, email, courseName] = line.match(/(\w+)\[(\d+)\] with email (\S+) joins (.+)/);
             const credits = Number(creditsString);
 
             if (courseName in coursesInfo 
