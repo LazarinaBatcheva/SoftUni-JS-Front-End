@@ -1,6 +1,6 @@
 function search() {
    const townsListElement = document.getElementById('towns');
-   let searchedTextElement = document.getElementById('searchText').value;
+   const searchedTextElement = document.getElementById('searchText').value;
    const resultElement = document.getElementById('result');
    let matchesCount = 0;
 
