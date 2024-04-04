@@ -15,18 +15,15 @@ function solve() {
     selectMenuToElement.appendChild(binaryOptionElement);
     selectMenuToElement.appendChild(hexadecimalOptionElement);
 
+    const convertors = {
+        binary: (number) => number.toString(2),
+        hexadecimal: (number) => number.toString(16).toUpperCase(),
+    };
+
     convertButtonElement.addEventListener('click', () => {
         const inputNumber = Number(inputElement.value);
         const selectToMenu = selectMenuToElement.value;
 
-        let result;
-
-        if (selectToMenu === 'binary') {
-            result = inputNumber.toString(2);
-        } else {
-            result = inputNumber.toString(16).toUpperCase();
-        }
-
-        resultElement.value = result;
+        resultElement.value = convertors[selectToMenu](inputNumber);
     });
 }
