@@ -7,25 +7,26 @@ function encodeAndDecodeMessages() {
 
     encodeButton.addEventListener('click', () => {
         const sentMessage = sendMsgElement.value;
-
         let encodeMsg = '';
+        
         for (let i = 0; i < sentMessage.length; i++) {
             let charCode = sentMessage.charCodeAt(i) + 1;
             encodeMsg += String.fromCharCode(charCode);
         }
-        receivedMsgElemen.textContent = encodeMsg;
+        
+        receivedMsgElemen.value = encodeMsg;
         sendMsgElement.value = '';
     });
 
     decodeButton.addEventListener('click', () => {
-        const receivedMessage = receivedMsgElemen.textContent;
-
+        const receivedMessage = receivedMsgElemen.value;
         let decodeMsg = '';
+        
         for (let i = 0; i < receivedMessage.length; i++) {
             let charCode = receivedMessage.charCodeAt(i) - 1;
             decodeMsg += String.fromCharCode(charCode);
         }
 
-        receivedMsgElemen.textContent = decodeMsg;
+        receivedMsgElemen.value = decodeMsg;
     });
 }
