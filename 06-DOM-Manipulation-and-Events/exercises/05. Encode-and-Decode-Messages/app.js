@@ -14,12 +14,12 @@ function encodeAndDecodeMessages() {
             encodeMsg += String.fromCharCode(charCode);
         }
         
-        receivedMsgElemen.textContent = encodeMsg;
+        receivedMsgElemen.value = encodeMsg;
         sendMsgElement.value = '';
     });
 
     decodeButton.addEventListener('click', () => {
-        const receivedMessage = receivedMsgElemen.textContent;
+        const receivedMessage = receivedMsgElemen.value;
         let decodeMsg = '';
         
         for (let i = 0; i < receivedMessage.length; i++) {
@@ -27,6 +27,6 @@ function encodeAndDecodeMessages() {
             decodeMsg += String.fromCharCode(charCode);
         }
 
-        receivedMsgElemen.textContent = decodeMsg;
+        receivedMsgElemen.value = decodeMsg;
     });
 }
