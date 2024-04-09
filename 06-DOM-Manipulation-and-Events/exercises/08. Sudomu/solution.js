@@ -8,6 +8,7 @@ function solve() {
 
     function checkSudomu() {
         let isSolved = true;
+        
         const numbersInRows = Array.from(tbodyTrElements)
             .map(tr => Array.from(tr.querySelectorAll('input')))
                             .map(input => Number(input.value));
