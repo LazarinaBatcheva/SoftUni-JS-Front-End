@@ -14,13 +14,8 @@ function solve() {
 			const question = sectionElement.querySelector('.question h2').textContent.trim();
 			const answer = questionElement.querySelector('.answer-text').textContent.trim();
 
-			console.log(answer);
-			console.log(questions[question] === answer);
-
 			if (questions[question] === answer) {
 				rightAnswers++;
-				console.log(rightAnswers);
-
 			}
 
 			const nextSection = sectionElement.nextElementSibling;
