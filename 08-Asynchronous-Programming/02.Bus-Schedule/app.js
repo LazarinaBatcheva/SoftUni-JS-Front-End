@@ -1,7 +1,7 @@
 function solve() {
     const baseUrl = 'http://localhost:3030/jsonstore/bus/schedule/' ;
 
-    const infoElement = document.querySelector('#info span');
+    const infoElement = document.querySelector('#info span.info');
     const departButtonElement = document.getElementById('depart');
     const arriveButtonElement = document.getElementById('arrive');
     let currentStopId = 'depot';
