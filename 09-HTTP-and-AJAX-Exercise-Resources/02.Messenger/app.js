@@ -4,6 +4,9 @@ function attachEvents() {
     const sendButtonElement = document.getElementById('submit');
     sendButtonElement.addEventListener('click', sendMessage);
 
+    const refreshButtonElement = document.getElementById('refresh');
+    refreshButtonElement.addEventListener('click', refresh);
+
     async function sendMessage() {
         const authorElement = document.querySelector('input[name=author]');
         const contentMsgElement = document.querySelector('input[name=content]');
@@ -20,9 +23,6 @@ function attachEvents() {
         authorElement.value = '';
         contentMsgElement.value = '';
     }
-
-    const refreshButtonElement = document.getElementById('refresh');
-    refreshButtonElement.addEventListener('click', refresh);
 
     async function refresh() {
         const messagesResponse = await fetch(messengerURL);
