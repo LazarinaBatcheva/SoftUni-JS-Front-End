@@ -65,8 +65,8 @@ function createGameElements(game) {
                 })
             });
 
-            await loadGames();
             clearInputs()
+            await loadGames();
         });
 
         const addButtonElement = document.getElementById('add-game');
@@ -125,8 +125,8 @@ async function addNewGame() {
         })
     });
 
+    clearInputs()
     await loadGames();
-    clearInputs();
 }
 
 function clearInputs() {
