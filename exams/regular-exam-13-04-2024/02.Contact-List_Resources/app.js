@@ -60,6 +60,7 @@ function solve() {
 		});
 
 		const checkDivElement = document.createElement('div');
+	    	checkDivElement.className = 'buttons';
 		checkDivElement.appendChild(editButtonElement);
 		checkDivElement.appendChild(saveButtonElement);
 
