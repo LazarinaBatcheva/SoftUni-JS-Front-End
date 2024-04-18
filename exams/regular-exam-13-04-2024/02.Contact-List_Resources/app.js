@@ -39,8 +39,8 @@ function solve() {
 			phoneInputElement.value = phone;
 			categoryInputElement.value = category;
 
-			checkUlElement.innerHTML = '';
-		})
+			checkLiElement.remove();
+		});
 
 		const saveButtonElement = document.createElement('button');
 		saveButtonElement.classList = ('save-btn');
@@ -48,16 +48,16 @@ function solve() {
 			const contactsUlElement = document.getElementById('contact-list');
 			contactsUlElement.appendChild(checkLiElement)
 
-			checkLiElement.removeChild(checkDivElement)
+			checkDivElement.remove();
 
 			const deleteButtonElement = document.createElement('button');
 			deleteButtonElement.classList = ('del-btn');
+			checkLiElement.appendChild(deleteButtonElement);
+			
 			deleteButtonElement.addEventListener('click', () => {
-				contactsUlElement.innerHTML = '';
-			})
-
-			contactsUlElement.appendChild(deleteButtonElement);
-		})
+				checkLiElement.remove();
+			});
+		});
 
 		const checkDivElement = document.createElement('div');
 		checkDivElement.appendChild(editButtonElement);
@@ -73,9 +73,17 @@ function solve() {
 		checkUlElement.appendChild(checkLiElement);
 
 
+		clearInputs();
+    }
+
+	function clearInputs() {
+		const nameInputElement = document.getElementById('name');
+		const phoneInputElement = document.getElementById('phone');
+		const categoryInputElement = document.getElementById("category");
+
 		nameInputElement.value = '';
 		phoneInputElement.value = '';
 		categoryInputElement.value = '';
-    }
+	}
 }
   
