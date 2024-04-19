@@ -3,10 +3,10 @@ window.addEventListener("load", solve);
 function solve() {
 	const formButtonElement = document.querySelector('form');
 	const typeInputElement = document.getElementById('type');
-    const ageInputElement = document.getElementById('age');
-    const genderSelectElement = document.getElementById('gender');
-    const adoptionInfoUlElement = document.getElementById('adoption-info');
-    const adoptedListUlElement = document.getElementById('adopted-list');
+	const ageInputElement = document.getElementById('age');
+    	const genderSelectElement = document.getElementById('gender');
+   	const adoptionInfoUlElement = document.getElementById('adoption-info');
+    	const adoptedListUlElement = document.getElementById('adopted-list');
 
 	formButtonElement.addEventListener('submit', (e) => {
 		e.preventDefault();
